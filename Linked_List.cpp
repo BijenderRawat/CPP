@@ -90,5 +90,41 @@ int main(){
 		cin>>d;
 		l.insert(d);
 	}
+	do{
+		cout<<"**********MENU**********\n1 -> insert element\n2 -> delete an element\n3 -> search an element\n4 -> display linked list\nchoose from above options: ";
+		cin>>ch;
+		switch(ch){
+			case 1:
+				int d;
+				cout<<"enter the data to be inserted: ";
+				cin>>d;
+				l.insert(d);
+				l.display();
+				break;
+			case 2:
+				cout<<"enter the data to be deleted: ";
+				int d;
+				cin>>d;
+				l.Delete(d);
+				l.display();
+				break;
+			case 3:
+				cout<<"enter the element to be searched: ";
+				int d;
+				cin>>d;
+				l.search(d);
+				l.display();
+				break;
+			case 4:
+				l.display();
+				break;
+			default:
+				cout<<"wrong choice";
+				break;
+		}
+		cout<<"code written by BIJENDER SINGH RAWAT\n";
+		cout<<"do u want 2 continue(y or n)";
+		ch = getchar();
+		}while(ch == 'y');
 	return 0;
 }

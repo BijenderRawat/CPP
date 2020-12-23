@@ -45,8 +45,8 @@ class linkedlist{
 			head = head -> next;
 		}
 	}
-	void insertatbegin(int d){
-		node *temp = new node;
+	/* void insertatbegin(int d){
+        	node *temp = new node;
 		temp -> data = d;
 		temp -> next = NULL;
 		if(head == NULL){
@@ -57,6 +57,7 @@ class linkedlist{
 			head = temp;
 		}
 	}
+	*/
 	void search(int d){
 		node *temp = head;
 		while(temp != NULL){
@@ -78,12 +79,16 @@ class linkedlist{
 	}
 };
 int main(){
+	int n;
+	char ch;
 	linkedlist l;
-	l.insert(1);
-	l.insert(2);
-	l.insert(3);
-	l.search(4);
-	l.Delete(1);
-	l.display();
+	cout<<"enter how many nodes u want 2 insert: ";
+	cin>>n;
+	cout<<"enter the data for "<<n<<" nodes\n";
+	for(int i = 0; i < n; i++){
+		int d;
+		cin>>d;
+		l.insert(d);
+	}
 	return 0;
 }

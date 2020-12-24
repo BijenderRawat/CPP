@@ -25,25 +25,20 @@ class linkedlist{
 	}
 	void Delete(int d){
 		node *temp = head;
-		node *prev = head;
-		while(temp != NULL){
-			if(temp -> data == d){
-				if(head -> next == NULL){
-					while(temp -> next != NULL){
-						prev = temp;
-						temp = temp -> next;
-					}
-					prev -> next = NULL;
-					free(temp);
-				}
-				else{
-					head -> data = head -> next -> data;
-					head -> next = head -> next -> next;
-					break;
-				}
-			}
-			head = head -> next;
+		node *prev = NULL;
+		while(temp != NULL and temp -> data == d){
+			temp = temp -> next;
+			delete temp;
+			return;
 		}
+		while(temp != NULL and temp -> data != d){
+			prev = temp;
+			temp = temp -> next;
+		}
+		if(temp == NULL)
+			return;
+		prev -> next = temp -> next;
+		delete temp;
 	}
 	/* void insertatbegin(int d){
         	node *temp = new node;
@@ -79,7 +74,7 @@ class linkedlist{
 	}
 };
 int main(){
-	int n;
+	int n, d;
 	char ch;
 	linkedlist l;
 	cout<<"enter how many nodes u want 2 insert: ";
@@ -95,7 +90,6 @@ int main(){
 		cin>>ch;
 		switch(ch){
 			case 1:
-				int d;
 				cout<<"enter the data to be inserted: ";
 				cin>>d;
 				l.insert(d);
@@ -103,14 +97,12 @@ int main(){
 				break;
 			case 2:
 				cout<<"enter the data to be deleted: ";
-				int d;
 				cin>>d;
 				l.Delete(d);
 				l.display();
 				break;
 			case 3:
 				cout<<"enter the element to be searched: ";
-				int d;
 				cin>>d;
 				l.search(d);
 				l.display();
@@ -124,7 +116,7 @@ int main(){
 		}
 		cout<<"code written by BIJENDER SINGH RAWAT\n";
 		cout<<"do u want 2 continue(y or n)";
-		ch = getchar();
+		cin>>ch;
 		}while(ch == 'y');
 	return 0;
 }

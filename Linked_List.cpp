@@ -1,3 +1,5 @@
+//****************** THIS PROGRAM IS COPYRIGHT OF BIJENDER RAWAT 193017 ********************//
+// THIS CODE IS WRITTEN IN LANGUAGE - C++ //
 #include<iostream>
 using namespace std;
 struct node{
@@ -11,6 +13,7 @@ class linkedlist{
 	linkedlist(){
 		head = tail = NULL;
 	}
+	// FUNCTION TO INSERT NODE IN LINKED LIST //
 	void insert(int d){
 		node *temp = new node;
 		temp -> data = d;
@@ -23,6 +26,7 @@ class linkedlist{
 			tail = temp;
 		}
 	}
+	// FUNCTION TO DELETE AN EXISTING NODE FROM LINKED LIST //
 	void Delete(int d){
 		node *temp = head;
 		node *prev = NULL;
@@ -53,6 +57,7 @@ class linkedlist{
 		}
 	}
 	*/
+	// FUNCTION TO INSERT A GIVEN DATA IN LINKED LIST //
 	void search(int d){
 		node *temp = head;
 		while(temp != NULL){
@@ -64,6 +69,7 @@ class linkedlist{
 		}
 		cout<<d<<" element is not found "<<endl;
 	}
+	// FUNCTION TO DISPLAY LINKED LIST //
 	void display(){
 		node *temp = head;
 		while(temp != NULL){
@@ -73,6 +79,8 @@ class linkedlist{
 		cout<<"NULL";
 	}
 };
+
+// MAIN FUNCTION STARTS HERE //
 int main(){
 	int n, d;
 	char ch;
@@ -85,6 +93,7 @@ int main(){
 		cin>>d;
 		l.insert(d);
 	}
+	// MENU DRIVEN PROGRAM //
 	do{
 		cout<<"**********MENU**********\n1 -> insert element\n2 -> delete an element\n3 -> search an element\n4 -> display linked list\nchoose from above options: ";
 		cin>>ch;

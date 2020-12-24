@@ -95,7 +95,12 @@ int main(){
 	}
 	// MENU DRIVEN PROGRAM //
 	do{
-		cout<<"**********MENU**********\n1 -> insert element\n2 -> delete an element\n3 -> search an element\n4 -> display linked list\nchoose from above options: ";
+		cout<<"**********MENU**********\n
+			1 -> insert element\n
+			2 -> delete an element\n
+			3 -> search an element\n
+			4 -> display linked list\n
+			choose from above options: ";
 		cin>>ch;
 		switch(ch){
 			case 1:

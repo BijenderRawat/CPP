@@ -1,4 +1,5 @@
-
+//****************** THIS PROGRAM IS COPYRIGHT OF BIJENDER RAWAT 193017 ********************//
+// THIS CODE IS WRITTEN IN LANGUAGE - C++ //
 #include<iostream>  
 #include<stack>  
 using namespace std;    

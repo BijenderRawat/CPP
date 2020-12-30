@@ -13,13 +13,13 @@ string infix_expression, postfix_expression;
 int ch;  
 do  
 {  
-cout << " Enter an infix expression: ";  
-cin >> infix_expression;  
- postfix_expression = convert(infix_expression);  
- cout << "\n Your Infix expression is: " << infix_expression;  
-cout << "\n Postfix expression is: " << postfix_expression;  
-cout << "\n \t Do you want to enter infix expression (1/ 0)?";  
-cin >> ch;  
+cout<<"Enter an infix expression: ";  
+cin>>infix_expression;  
+postfix_expression = convert(infix_expression);  
+cout<<"\n Your Infix expression is: "<<infix_expression;  
+cout<<"\n Postfix expression is: "<<postfix_expression;  
+cout<<"\n \t Do you want to enter infix expression (1/ 0)?";  
+cin>>ch;  
 } while(ch == 1);  
 return 0;  
 } 
@@ -31,7 +31,7 @@ return false;
 }   
 bool IsOperand(char c)  
 {  
-if( c >= 'A' && c <= 'Z')   
+if(c >= 'A' && c <= 'Z')   
 return true;  
 if (c >= 'a' && c <= 'z')   
 return true;  
